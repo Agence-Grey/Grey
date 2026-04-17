@@ -3,13 +3,13 @@ import Link from "next/link";
 const contactBlocks = [
   {
     label: "Email",
-    value: "contact@agencegrey.fr",
-    href: "mailto:contact@agencegrey.fr",
+    value: "agencegrey06@gmail.com",
+    href: "mailto:agencegrey06@gmail.com",
   },
   {
-    label: "Téléphone",
-    value: "À confirmer",
-    href: null,
+    label: "WhatsApp",
+    value: "+33 6 18 00 85 31",
+    href: "https://wa.me/33618008531",
   },
   {
     label: "Zone",
@@ -44,9 +44,6 @@ export function ContactInfo() {
         ))}
       </div>
 
-      <div className="rounded-[1.5rem] border border-dashed border-white/15 bg-black/20 p-4 text-sm leading-7 text-[var(--color-muted-foreground)]">
-        Note : l’email de contact et le téléphone peuvent encore être remplacés par vos coordonnées finales avant mise en ligne.
-      </div>
     </div>
   );
 }
