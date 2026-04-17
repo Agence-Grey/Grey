@@ -34,7 +34,7 @@ export function MobileMenu() {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--color-accent)]">AG Grey</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--color-accent)]">Le web qui rassure</p>
                   <p className="mt-2 text-sm text-[var(--color-muted-foreground)]">Navigation</p>
                 </div>
                 <Button variant="ghost" size="icon" onClick={() => setOpen(false)} aria-label="Fermer le menu">

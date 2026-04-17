@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { MobileMenu } from "@/components/layout/mobile-menu";
 import { Button } from "@/components/ui/button";
@@ -26,13 +27,15 @@ export function Header() {
         )}
       >
         <Link href="/" className="flex items-center gap-3 text-white">
-          <span className="inline-flex size-10 items-center justify-center rounded-full bg-[var(--color-accent)]/20 text-sm font-semibold text-[var(--color-accent)]">
-            AG
-          </span>
-          <div className="leading-tight">
-            <p className="text-sm font-semibold tracking-[0.22em] text-white">AG Grey</p>
-            <p className="text-xs text-[var(--color-muted-foreground)]">Agence web IA</p>
-          </div>
+          <Image
+            src="/logo-grey.png"
+            alt="Agence Grey"
+            width={140}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
+          <p className="text-sm font-medium tracking-wide text-[var(--color-muted-foreground)]">le web qui rassure</p>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
