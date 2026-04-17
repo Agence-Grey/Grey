@@ -13,22 +13,22 @@ export const siteConfig = {
 
 export const offers = [
   {
-    slug: "starter",
-    name: "Starter",
-    price: "À partir de 1 490€",
-    description: "Landing page premium pour lancer un studio ou une offre signature.",
+    slug: "essentiel",
+    name: "L'Essentiel",
+    price: "À partir de 1 490 €",
+    description: "Site professionnel, clair et moderne. Sans engagement mensuel.",
   },
   {
-    slug: "pro",
-    name: "Pro",
-    price: "À partir de 2 990€",
-    description: "Site institutionnel complet avec parcours SEO et conversion clair.",
+    slug: "confort",
+    name: "Le Confort",
+    price: "1 290 € + 249€/mois",
+    description: "Site + maintenance + hébergement + SEO. Engagement 12 mois.",
   },
   {
-    slug: "premium",
-    name: "Premium",
-    price: "Sur devis",
-    description: "Expérience sur-mesure avec automatisations, paiement et acquisition.",
+    slug: "booster",
+    name: "Le Booster",
+    price: "1 290 € + abonnement",
+    description: "Site + maintenance + automatisations IA pour accélérer vos ventes.",
   },
 ] as const;
 

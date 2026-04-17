@@ -6,9 +6,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { offers } from "@/lib/constants";
 
 const bullets = {
-  starter: ["Landing page premium", "Copy orienté conversion", "Responsive impeccable"],
-  pro: ["Site institutionnel complet", "Parcours SEO clair", "Structure prête pour le scale"],
-  premium: ["Expérience sur mesure", "Automatisations & paiement", "Accompagnement stratégique"],
+  essentiel: ["Site avec RDV en ligne", "Design sur mesure", "SEO de base : référencement local"],
+  confort: ["Maintenance et hébergement inclus", "Modifications à la demande", "Optimisations SEO régulières"],
+  booster: ["Message auto après appel manqué", "Gestion des listes d'attente", "Demande auto d'avis Google"],
 } as const;
 
 export function Solutions() {
