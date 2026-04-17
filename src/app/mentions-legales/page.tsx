@@ -13,10 +13,10 @@ const sections = [
     title: "Éditeur du site",
     body: [
       "Nom commercial : L’Agence Grey",
-      "Responsables de publication : Adrien & Ophélie",
-      "Adresse : Breil-sur-Roya, région PACA — à compléter avec l’adresse légale exacte",
-      "Email : contact@agencegrey.fr — à confirmer avant mise en ligne",
-      "Téléphone : à compléter",
+      "Responsables de publication : Adrien DEBARLE & Ophélie HUTIN",
+      "Adresse : à compléter",
+      "Email : agencegrey06@gmail.com",
+      "Téléphone / WhatsApp : +33 6 18 00 85 31",
     ],
   },
   {
