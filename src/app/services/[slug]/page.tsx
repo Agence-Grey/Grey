@@ -22,6 +22,25 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const offer = servicePackages.find((entry) => entry.slug === slug);
   if (!offer) notFound();
 
+  const methods = [
+    {
+      title: "Conformité légale",
+      description: "Un site qui respecte vos obligations légales : mentions légales, CGU, RGPD…",
+    },
+    {
+      title: "Écoute & cadrage",
+      description: "Une écoute attentive de vos besoins avant toute création : couleurs, RDV en ligne, automatisation…",
+    },
+    {
+      title: "Accompagnement personnalisé",
+      description: "Chaque étape de création sera validée en amont et en aval. Nous serons à votre écoute à chaque moment.",
+    },
+    {
+      title: "Prise de RDV simplifiée",
+      description: "Un site qui simplifie la prise de rendez-vous en ligne : trouvez vos futurs élèves en quelques clics.",
+    },
+  ];
+
   return (
     <SectionWrapper
       eyebrow="Service"
@@ -43,10 +62,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         </div>
 
         <div className="rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,_rgba(168,85,247,0.12),_rgba(255,255,255,0.04))] p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">Approche Grey</p>
-          <div className="mt-5 space-y-4 text-sm leading-7 text-[var(--color-muted-foreground)]">
-            <p>Chaque offre est pensée pour rester simple à comprendre, simple à valider et simple à faire évoluer.</p>
-            <p>On préfère une structure claire et robuste à une promesse floue et spectaculaire.</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">Notre méthode Grey</p>
+          <div className="mt-5 space-y-5">
+            {methods.map((method) => (
+              <div key={method.title} className="space-y-1">
+                <p className="text-sm font-semibold text-white">{method.title}</p>
+                <p className="text-sm leading-6 text-[var(--color-muted-foreground)]">{method.description}</p>
+              </div>
+            ))}
           </div>
           <div className="mt-8 flex flex-col gap-3">
             <Button asChild>
