@@ -14,7 +14,7 @@ const sections = [
     body: [
       "Nom commercial : L’Agence Grey",
       "Responsables de publication : Adrien DEBARLE & Ophélie HUTIN",
-      "Adresse : à compléter",
+      "Adresse : 367 route de Ciaus, Breil-sur-Roya 06540",
       "Email : agencegrey06@gmail.com",
       "Téléphone / WhatsApp : +33 6 18 00 85 31",
     ],
