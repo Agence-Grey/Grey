@@ -44,3 +44,13 @@ canonicalId,name,description,module,path
 "bmad-bmb-setup","bmad-bmb-setup","Sets up BMad Builder module in a project. Use when the user requests to 'install bmb module', 'configure BMad Builder', or 'setup BMad Builder'.","bmb","_bmad/bmb/bmad-bmb-setup/SKILL.md"
 "bmad-module-builder","bmad-module-builder","Plans, creates, and validates BMad modules. Use when the user requests to 'ideate module', 'plan a module', 'create module', 'build a module', or 'validate module'.","bmb","_bmad/bmb/bmad-module-builder/SKILL.md"
 "bmad-workflow-builder","bmad-workflow-builder","Builds, converts, and analyzes workflows and skills. Use when the user requests to ""build a workflow"", ""modify a workflow"", ""quality check workflow"", ""analyze skill"", or ""convert a skill"".","bmb","_bmad/bmb/bmad-workflow-builder/SKILL.md"
+impeccable,impeccable,"Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics. Loaded automatically for all frontend design work.",custom,.agent/skills/impeccable/SKILL.md
+impeccable-audit,impeccable-audit,"Run technical quality checks on frontend code: accessibility, performance, responsive design. Use before committing frontend changes.",custom,.agent/skills/impeccable-audit/SKILL.md
+impeccable-polish,impeccable-polish,"Final design pass before shipping: design system alignment, cleanup, shipping readiness. Use before deploying to production.",custom,.agent/skills/impeccable-polish/SKILL.md
+impeccable-critique,impeccable-critique,"UX design review: hierarchy, clarity, emotional resonance. Use when reviewing UI/UX quality.",custom,.agent/skills/impeccable-critique/SKILL.md
+impeccable-layout,impeccable-layout,"Fix layout, spacing, visual rhythm issues. Use when design feels cramped or unbalanced.",custom,.agent/skills/impeccable-layout/SKILL.md
+impeccable-typeset,impeccable-typeset,"Fix font choices, hierarchy, sizing issues. Use when typography needs improvement.",custom,.agent/skills/impeccable-typeset/SKILL.md
+impeccable-colorize,impeccable-colorize,"Introduce strategic color. Use when design needs better color usage.",custom,.agent/skills/impeccable-colorize/SKILL.md
+impeccable-animate,impeccable-animate,"Add purposeful motion. Use when UI needs micro-interactions or transitions.",custom,.agent/skills/impeccable-animate/SKILL.md
+impeccable-optimize,impeccable-optimize,"Performance improvements for frontend code. Use when pages are slow.",custom,.agent/skills/impeccable-optimize/SKILL.md
+impeccable-harden,impeccable-harden,"Add error handling, edge cases, i18n. Use before production deployment.",custom,.agent/skills/impeccable-harden/SKILL.md
