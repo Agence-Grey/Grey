@@ -6,7 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "design:audit": "npx impeccable detect src/",
+    "design:audit:json": "npx impeccable detect src/ --json",
+    "design:audit:fast": "npx impeccable detect src/ --fast",
+    "precommit": "npm run lint && npm run design:audit:fast"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
@@ -37,6 +41,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.15",
+    "impeccable": "^2.1.7",
     "prettier": "^3.8.2",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4",
