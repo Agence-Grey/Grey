@@ -13,7 +13,7 @@ export function CtaSection() {
               Si ton studio a besoin de plus de visibilité, ou que tu manques de temps pour gérer ton site :
             </h2>
             <p className="max-w-2xl text-base leading-7 text-black/80 sm:text-lg">
-              Une discussion de quelques minutes nous permettra d'identifier tes besoins et les bases de ton projet !
+              Une discussion de quelques minutes nous permettra d&apos;identifier tes besoins et les bases de ton projet !
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
