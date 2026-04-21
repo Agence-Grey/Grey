@@ -32,9 +32,21 @@ export const offers = [
   },
 ] as const;
 
-export const processSteps = [
-  "Audit & cadrage",
-  "UX & direction artistique",
-  "Production IA + intégration",
-  "Mise en ligne & optimisation",
+export const methodCards = [
+  {
+    title: "Conformité légale",
+    description: "Un site qui respecte vos obligations légales : mentions légales, CGU, RGPD…",
+  },
+  {
+    title: "Écoute & personnalisation",
+    description: "Une écoute attentive de vos besoins avant toute création : couleurs, rdv en ligne, automatisation…",
+  },
+  {
+    title: "Accompagnement sur-mesure",
+    description: "Un accompagnement personnalisé : chaque étape de création sera validée en amont et en aval, nous serons à votre écoute à chaque moment.",
+  },
+  {
+    title: "Rendez-vous en ligne",
+    description: "Un site qui simplifie la prise de rendez-vous en ligne : trouvez vos futurs élèves en quelques clics.",
+  },
 ] as const;
