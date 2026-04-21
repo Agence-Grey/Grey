@@ -96,7 +96,7 @@ export const portfolioEntries = [
 
 export const aboutValues = [
   "Clarté avant complexité",
-  "Prix lisibles et cadre net",
-  "Proximité humaine, même à distance",
-  "Sites pensés pour rassurer avant de séduire",
+  "Prix lisibles et prise de rendez-vous rapide",
+  "Proximité humaine et inclusivité dans votre présentation",
+  "Site pensé pour rassurer et séduire",
 ] as const;
