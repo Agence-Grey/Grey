@@ -28,6 +28,7 @@ export function PortfolioPreview() {
     <SectionWrapper
       eyebrow="Portfolio"
       title="Quelques exemples de sites que nous avons déjà créés"
+      description="En attendant de créer le vôtre, vous pouvez vous faire une idée de notre travail."
     >
       <div className="grid gap-6 lg:grid-cols-3">
         {previewProjects.map((project, index) => (
