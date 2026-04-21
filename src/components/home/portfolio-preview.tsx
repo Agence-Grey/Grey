@@ -27,8 +27,7 @@ export function PortfolioPreview() {
   return (
     <SectionWrapper
       eyebrow="Portfolio"
-      title="Quelques directions créatives, avant les vrais cas clients"
-      description="En attendant les contenus finaux, la section prépare déjà le ton, le rythme et la structure des futures réalisations."
+      title="Quelques exemples de sites que nous avons déjà créés"
     >
       <div className="grid gap-6 lg:grid-cols-3">
         {previewProjects.map((project, index) => (
