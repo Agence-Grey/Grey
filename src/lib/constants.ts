@@ -5,7 +5,7 @@ export const siteConfig = {
   url: "https://agencegrey.fr",
   nav: [
     { href: "/", label: "Accueil" },
-    { href: "/services", label: "Services" },
+    { href: "/services", label: "Nos offres" },
     { href: "/about", label: "À propos" },
     { href: "/contact", label: "Contact" },
   ],
