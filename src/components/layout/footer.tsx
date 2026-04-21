@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/constants";
 
 const footerLinks = [
-  { href: "/services", label: "Services" },
+  { href: "/services", label: "Nos offres" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/about", label: "À propos" },
   { href: "/contact", label: "Contact" },
@@ -22,7 +22,7 @@ export function Footer() {
           <div className="space-y-3">
             <p className="text-lg font-semibold text-white">{siteConfig.name}</p>
             <p className="max-w-xl text-sm leading-7 text-[var(--color-muted-foreground)]">
-              Des sites sobres, rapides et orientés conversion pour studios de mouvement, sport et biomécanique.
+              Un site représentant votre passion, visible par vos futurs élèves, et des cours rapides à réserver en ligne.
             </p>
           </div>
 
