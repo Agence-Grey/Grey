@@ -23,7 +23,8 @@ export function MobileMenu() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.18 }}
-            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-2xl md:hidden"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.97)" }}
+            className="fixed inset-0 z-50 backdrop-blur-2xl md:hidden"
           >
             <motion.div
               initial={{ opacity: 0, y: 16 }}
