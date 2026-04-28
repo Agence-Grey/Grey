@@ -2,10 +2,10 @@ import { NextRequest } from "next/server";
 import { readFileSync } from "fs";
 
 function getApiKey(): string | undefined {
-  if (process.env.OLLAMA_API_KEY) return process.env.OLLAMA_API_KEY;
+  if (process.env.OPENCODE_ZEN_API_KEY) return process.env.OPENCODE_ZEN_API_KEY;
   try {
     const env = readFileSync("/root/.hermes/.env", "utf-8");
-    const match = env.match(/^OLLAMA_API_KEY=(.+)$/m);
+    const match = env.match(/^OPENCODE_ZEN_API_KEY=(.+)$/m);
     return match?.[1]?.trim();
   } catch {
     return undefined;
@@ -56,18 +56,18 @@ export async function POST(req: NextRequest) {
 
   const apiKey = getApiKey();
   if (!apiKey) {
-    return new Response(JSON.stringify({ error: "OLLAMA_API_KEY manquante" }), { status: 500 });
+    return new Response(JSON.stringify({ error: "Clé API manquante" }), { status: 500 });
   }
 
   const body = {
-    model: "deepseek/deepseek-v3.1",
+    model: "big-pickle",
     messages: [{ role: "system", content: SYSTEM_PROMPT }, ...messages],
     stream: true,
     temperature: 0.7,
     max_tokens: 800,
   };
 
-  const res = await fetch("https://ollama.com/v1/chat/completions", {
+  const res = await fetch("https://opencode.ai/zen/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -81,7 +81,6 @@ export async function POST(req: NextRequest) {
     return new Response(JSON.stringify({ error: text }), { status: res.status });
   }
 
-  const encoder = new TextEncoder();
   const readable = new ReadableStream({
     async start(controller) {
       const reader = res.body?.getReader();
