@@ -23,7 +23,8 @@ export function Header() {
         transition={{ duration: 0.2, ease: "easeOut" }}
         className={cn(
           "mx-auto flex max-w-7xl items-center justify-between rounded-full border px-4 py-3 backdrop-blur-2xl sm:px-6 lg:px-8",
-          isScrolled ? "supports-[backdrop-filter]:bg-black/85" : "supports-[backdrop-filter]:bg-black/60"
+          isScrolled ? "supports-[backdrop-filter]:bg-black/85" : "supports-[backdrop-filter]:bg-black/60",
+          "max-md:!bg-[#0a0a0a] max-md:backdrop-blur-none"
         )}
       >
         <Link href="/" className="flex items-center gap-3 text-white">
