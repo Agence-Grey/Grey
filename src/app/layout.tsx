@@ -4,6 +4,7 @@ import { CookieBanner } from "@/components/layout/cookie-banner";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { Toaster } from "@/components/ui/sonner";
+import { LaureWidget } from "@/components/laure/laure-widget";
 import { siteConfig } from "@/lib/constants";
 import "./globals.css";
 
@@ -37,6 +38,7 @@ export default function RootLayout({
                   <Footer />
                   <CookieBanner />
                   <Toaster />
+                  <LaureWidget />
                 </div>
 </body>
     </html>
