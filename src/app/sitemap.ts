@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
+import { siteConfig } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const rawBase = process.env.NEXT_PUBLIC_SITE_URL ?? "https://agencegrey.fr";
-  const baseUrl = rawBase.trim().replace(/\/$/, "");
+  const baseUrl = siteConfig.url;
 
   return ["", "/about", "/services", "/portfolio", "/contact", "/devis"].map((path) => ({
     url: new URL(path || "/", baseUrl).toString(),
