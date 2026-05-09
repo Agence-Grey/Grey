@@ -18,7 +18,7 @@ export function Hero() {
               Des sites qui donnent enfin une allure premium aux studios qui bossent sérieusement.
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-[var(--color-muted-foreground)] sm:text-xl">
-              L’Agence Grey conçoit des expériences web sobres, rapides et orientées conversion pour les studios de mouvement, sport et biomécanique. Pas de cirque visuel, juste une présence qui tient la route.
+              L’Agence Grey conçoit des expériences web sobres, rapides et orientées conversion pour les studios de mouvement, sport et biomécanique à Nice et sur la Côte d’Azur. Pas de cirque visuel, juste une présence qui tient la route.
             </p>
           </div>
 

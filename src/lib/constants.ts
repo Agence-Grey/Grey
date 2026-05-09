@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "L'Agence Grey",
   description:
-    "Grey : le web qui rassure — Agence web IA pour studios de sport, mouvement et biomécanique.",
-  url: "https://agencegrey.fr",
+    "Grey : le web qui rassure — Agence web IA à Nice pour studios de sport, mouvement et biomécanique.",
+  url: "https://agence-grey.fr",
   nav: [
     { href: "/", label: "Accueil" },
     { href: "/services", label: "Nos offres" },

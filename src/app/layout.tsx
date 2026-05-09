@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { Toaster } from "@/components/ui/sonner";
 import { LaureWidget } from "@/components/laure/laure-widget";
+import { SchemaOrg } from "@/components/shared/schema-org";
 import { siteConfig } from "@/lib/constants";
 import "./globals.css";
 
@@ -18,7 +19,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.name,
+    default: "L'Agence Grey — Agence web IA à Nice | Sites premium pour studios",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -75,6 +76,27 @@ export default function RootLayout({
                   <CookieBanner />
                   <Toaster />
                   <LaureWidget />
+                  <SchemaOrg data={{
+                    "@context": "https://schema.org",
+                    "@type": "LocalBusiness",
+                    name: "L'Agence Grey",
+                    description: siteConfig.description,
+                    url: siteConfig.url,
+                    address: {
+                      "@type": "PostalAddress",
+                      streetAddress: "367 route de Ciaus",
+                      addressLocality: "Breil-sur-Roya",
+                      postalCode: "06540",
+                      addressCountry: "FR",
+                    },
+                    areaServed: {
+                      "@type": "City",
+                      name: "Nice",
+                    },
+                    knowsAbout: ["Agence web", "Création site internet", "SEO"],
+                    telephone: "+33618008531",
+                    email: "agencegrey06@gmail.com",
+                  }} />
                 </div>
 </body>
     </html>
