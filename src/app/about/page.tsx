@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { buildPageMetadata } from "@/components/shared/seo";
 import { aboutValues } from "@/lib/content";
@@ -38,18 +39,35 @@ export default function AboutPage() {
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
-            {["Adrien", "Ophélie"].map((name) => (
-              <div key={name} className="rounded-[2rem] border border-white/10 bg-white/5 p-4">
-                <div className="aspect-[4/5] rounded-[1.5rem] bg-[linear-gradient(135deg,_rgba(168,85,247,0.18),_rgba(255,255,255,0.04))] p-4">
-                  <div className="flex h-full items-end rounded-[1.25rem] border border-white/10 bg-black/50 p-4">
-                    <div>
-                      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">Placeholder photo</p>
-                      <p className="mt-2 text-xl font-semibold text-white">{name}</p>
-                    </div>
+            {/* Adrien — placeholder en attendant sa photo */}
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-4">
+              <div className="aspect-[4/5] rounded-[1.5rem] bg-[linear-gradient(135deg,_rgba(168,85,247,0.18),_rgba(255,255,255,0.04))] p-4">
+                <div className="flex h-full items-end rounded-[1.25rem] border border-white/10 bg-black/50 p-4">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">Photo à venir</p>
+                    <p className="mt-2 text-xl font-semibold text-white">Adrien</p>
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Ophélie */}
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-4">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem]">
+                <Image
+                  src="/images/team/ophelie.jpg"
+                  alt="Ophélie — co-fondatrice de L'Agence Grey"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  priority
+                />
+                <div className="absolute inset-0 rounded-[1.5rem] bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <p className="text-xl font-semibold text-white">Ophélie</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </SectionWrapper>
