@@ -53,8 +53,9 @@ export default function ServicesPage() {
       >
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {serviceAddons.map((item) => (
-            <div key={item} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 text-sm leading-7 text-[var(--color-muted-foreground)]">
-              {item}
+            <div key={item.title} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 text-sm leading-7 text-[var(--color-muted-foreground)]">
+              <p className="font-semibold text-white">{item.title}</p>
+              <p className="mt-1">{item.description}</p>
             </div>
           ))}
         </div>
