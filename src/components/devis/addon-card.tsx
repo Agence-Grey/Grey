@@ -11,7 +11,7 @@ interface AddOnCardProps {
 }
 
 export function AddOnCard({ icon, title, description, index }: AddOnCardProps) {
-  const IconComponent = (LucideIcons as Record<string, React.ComponentType<{ className?: string }>>)[icon] ?? LucideIcons.Package;
+  const IconComponent = (LucideIcons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[icon] ?? LucideIcons.Package;
 
   return (
     <motion.div
