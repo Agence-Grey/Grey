@@ -23,10 +23,14 @@ export function Hero() {
           </div>
 
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Button asChild size="lg">
+            <Button
+              asChild
+              size="lg"
+              className="!bg-[#7c3aed] hover:!bg-[#6d28d9] !px-8 !py-4 !text-base !font-bold shadow-[0_0_30px_rgba(124,58,237,0.3)]"
+            >
               <Link href="/devis">
                 Demander un devis
-                <ArrowRight className="size-4" />
+                <ArrowRight className="size-5" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="secondary">
