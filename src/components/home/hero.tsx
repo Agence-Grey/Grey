@@ -11,14 +11,14 @@ export function Hero() {
       <div className="grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div className="space-y-8">
           <Badge variant="secondary" className="w-fit border-[var(--color-accent)]/20 bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-            Sprint 3 · Home experience
+            Agence web pour studios
           </Badge>
           <div className="space-y-6">
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Des sites qui donnent enfin une allure premium aux studios qui bossent sérieusement.
+              CRÉATEURS DE SITES WEB POUR DES STUDIOS DE MOUVEMENT & BIEN-ÊTRE
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-[var(--color-muted-foreground)] sm:text-xl">
-              L’Agence Grey conçoit des expériences web sobres, rapides et orientées conversion pour les studios de mouvement, sport et biomécanique à Nice et sur la Côte d’Azur. Pas de cirque visuel, juste une présence qui tient la route.
+              Des sites internet pensés pour développer votre studio, tout simplement. De la pole dance au yoga, nous créons des sites web à l'image de votre discipline : dynamiques, fluides et élégants. Offrez à votre studio une présence digitale professionnelle, sans complexité, pour mettre en lumière votre passion et faciliter la réservation.
             </p>
           </div>
 
