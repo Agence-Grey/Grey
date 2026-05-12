@@ -11,7 +11,6 @@ interface PricingCardProps {
   summary: string;
   features: readonly string[];
   featured?: boolean;
-  ctaText: string;
   href: string;
 }
 
@@ -22,7 +21,6 @@ export function PricingCard({
   summary,
   features,
   featured = false,
-  ctaText,
   href,
 }: PricingCardProps) {
   return (
@@ -33,7 +31,7 @@ export function PricingCard({
       transition={{ duration: 0.4 }}
       className={`relative flex flex-col rounded-[2rem] border p-8 transition-transform hover:-translate-y-1 ${
         featured
-          ? "border-[var(--color-accent)]/35 bg-[linear-gradient(180deg,_rgba(168,85,247,0.12),_rgba(255,255,255,0.04))] shadow-[0_0_60px_rgba(168,85,247,0.12)] lg:scale-[1.03] lg:hover:-translate-y-1"
+          ? "border-[var(--color-accent)]/35 bg-[linear-gradient(180deg,_rgba(168,85,247,0.12),_rgba(255,255,255,0.04))] shadow-[0_0_60px_rgba(168,85,247,0.12)]"
           : "border-white/10 bg-white/5"
       }`}
     >
@@ -45,9 +43,7 @@ export function PricingCard({
 
       <div>
         <h3 className="text-xl font-semibold text-white">{name}</h3>
-        <p className="mt-3 text-[2.2rem] font-bold tracking-tight text-white">{price}</p>
-        <p className="mt-1 text-sm text-[var(--color-muted-foreground)]">{priceNote}</p>
-        <p className="mt-5 border-b border-white/10 pb-5 text-[0.95rem] leading-relaxed text-[var(--color-muted-foreground)]">
+        <p className="mt-4 border-b border-white/10 pb-5 text-[0.95rem] leading-relaxed text-[var(--color-muted-foreground)]">
           {summary}
         </p>
       </div>
@@ -62,8 +58,11 @@ export function PricingCard({
       </ul>
 
       <div className="mt-auto">
-        <Button asChild className="w-full" variant={featured ? "default" : "secondary"}>
-          <Link href={href}>{ctaText}</Link>
+        <Button asChild className="w-full" variant={featured ? "default" : "secondary"} size="lg">
+          <Link href={href}>
+            <span className="text-lg font-bold">{price}</span>
+            <span className="ml-2 text-xs font-normal opacity-80">{priceNote}</span>
+          </Link>
         </Button>
       </div>
     </motion.div>

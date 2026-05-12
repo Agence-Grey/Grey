@@ -41,7 +41,6 @@ export default function DevisPage() {
                 summary={offer.summary}
                 features={offer.features}
                 featured={index === 1}
-                ctaText="Demander un devis"
                 href="/contact"
               />
             ))}
