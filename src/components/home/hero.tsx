@@ -18,7 +18,7 @@ export function Hero() {
               CRÉATEURS DE SITES WEB POUR DES STUDIOS DE MOUVEMENT & BIEN-ÊTRE
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-[var(--color-muted-foreground)] sm:text-xl">
-              Des sites internet pensés pour développer votre studio, tout simplement. De la pole dance au yoga, nous créons des sites web à l'image de votre discipline : dynamiques, fluides et élégants. Offrez à votre studio une présence digitale professionnelle, sans complexité, pour mettre en lumière votre passion et faciliter la réservation.
+              Des sites internet pensés pour développer votre studio, tout simplement. De la pole dance au yoga, nous créons des sites web à l&apos;image de votre discipline : dynamiques, fluides et élégants. Offrez à votre studio une présence digitale professionnelle, sans complexité, pour mettre en lumière votre passion et faciliter la réservation.
             </p>
           </div>
 
