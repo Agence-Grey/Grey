@@ -10,6 +10,19 @@ import { siteConfig } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Agence web IA à Nice | Sites premium pour studios",
   description: siteConfig.description,
+  openGraph: {
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "L'Agence Grey — le web qui rassure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 const schema = {
