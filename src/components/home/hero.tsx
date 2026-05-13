@@ -40,9 +40,9 @@ export function Hero() {
 
           <div className="grid gap-4 sm:grid-cols-3">
             {[
-              ["< 2 semaines", "pour une landing premium"],
-              ["100% FR", "copy, parcours et SEO pensés local"],
-              ["IA + structure", "pour livrer vite sans bâcler"],
+              ["Disponibilité 24/7", "La vitrine de votre studio sans stress : on s'occupe de la technique (bug, maintenance, mise à jour)."],
+              ["Proximité", "On s'adapte à vos besoins et validons chaque étape avec vous pour garantir un site qui met en valeur votre studio."],
+              ["Gain de temps grâce à l'IA", "L'intelligence artificielle pour automatiser vos tâches quotidiennes (annulation, liste d'attente, rappel)."],
             ].map(([value, label]) => (
               <div key={value} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
                 <p className="text-xl font-semibold text-white">{value}</p>
