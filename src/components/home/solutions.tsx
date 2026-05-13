@@ -14,7 +14,7 @@ const bullets = {
 export function Solutions() {
   return (
     <SectionWrapper
-      eyebrow="Solutions"
+      eyebrow="Nos Offres"
       title="Trois cartes, trois niveaux d’intensité"
       description="Une base commerciale nette, avec assez de matière pour présenter l’offre sans improviser."
     >
