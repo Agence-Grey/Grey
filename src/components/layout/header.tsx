@@ -36,7 +36,7 @@ export function Header() {
             className="h-10 w-auto"
             priority
           />
-          <p className="text-sm font-medium tracking-wide text-[var(--color-muted-foreground)]">le web qui rassure</p>
+          <p className="text-sm font-medium tracking-wide text-[var(--color-muted-foreground)]">Le web qui rassure</p>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
