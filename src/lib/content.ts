@@ -18,8 +18,8 @@ export const servicePackages = [
   {
     slug: "confort",
     name: "Le Confort",
-    price: "1 290 €",
-    priceNote: "+ 249 €/mois",
+    price: "1 290 € + 249 €/mois",
+    priceNote: "",
     summary: "Un site toujours à jour, sécurisé et optimisé, sans que vous ayez à vous en occuper. Notre formule la plus populaire.",
     idealFor:
       "Ce pack est fait pour vous si vous voulez un site toujours à jour et sécurisé, une identité visuelle professionnelle (logo, couleurs, police), la possibilité de faire des modifications sans perdre de temps, et un site performant sur Google sur la durée.",
@@ -35,8 +35,8 @@ export const servicePackages = [
   {
     slug: "booster",
     name: "Le Booster",
-    price: "1 290 €",
-    priceNote: "+ abonnement sur mesure",
+    price: "1 290 € + abonnement sur mesure",
+    priceNote: "",
     summary: "Augmentez vos rendez-vous, vos appels et vos ventes avec l'automatisation IA. Pour ceux qui veulent aller plus loin.",
     idealFor:
       "Ce pack est fait pour vous si vous voulez augmenter vos rendez-vous et ventes rapidement, automatiser vos tâches, que vos prospects ne soient jamais perdus (même en cas d'appel manqué), et être sponsorisé sur Google.",
