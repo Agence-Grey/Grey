@@ -3,7 +3,7 @@ export const servicePackages = [
     slug: "essentiel",
     name: "L'Essentiel",
     price: "1 490 €",
-    priceNote: "Paiement unique — sans engagement",
+    priceNote: "",
     summary: "Un site professionnel, clair et moderne, sans engagement mensuel. Parfait pour poser vos premières pierres sur le web.",
     idealFor:
       "Ce pack est fait pour vous si vous voulez un site professionnel pour présenter votre activité, être visible sur Google, proposer des rendez-vous en ligne et permettre à vos clients de vous contacter facilement. Simple à gérer, sans engagement mensuel.",
@@ -19,7 +19,7 @@ export const servicePackages = [
     slug: "confort",
     name: "Le Confort",
     price: "1 290 €",
-    priceNote: "+ 249 €/mois — engagement 12 mois",
+    priceNote: "+ 249 €/mois",
     summary: "Un site toujours à jour, sécurisé et optimisé, sans que vous ayez à vous en occuper. Notre formule la plus populaire.",
     idealFor:
       "Ce pack est fait pour vous si vous voulez un site toujours à jour et sécurisé, une identité visuelle professionnelle (logo, couleurs, police), la possibilité de faire des modifications sans perdre de temps, et un site performant sur Google sur la durée.",
@@ -36,7 +36,7 @@ export const servicePackages = [
     slug: "booster",
     name: "Le Booster",
     price: "1 290 €",
-    priceNote: "+ abonnement mensuel sur mesure",
+    priceNote: "+ abonnement sur mesure",
     summary: "Augmentez vos rendez-vous, vos appels et vos ventes avec l'automatisation IA. Pour ceux qui veulent aller plus loin.",
     idealFor:
       "Ce pack est fait pour vous si vous voulez augmenter vos rendez-vous et ventes rapidement, automatiser vos tâches, que vos prospects ne soient jamais perdus (même en cas d'appel manqué), et être sponsorisé sur Google.",

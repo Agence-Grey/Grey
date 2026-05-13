@@ -61,7 +61,7 @@ export function PricingCard({
         <Button asChild className="w-full" variant={featured ? "default" : "secondary"} size="lg">
           <Link href={href}>
             <span className="text-lg font-bold">{price}</span>
-            <span className="ml-2 text-xs font-normal opacity-80">{priceNote}</span>
+            {priceNote && <span className="ml-2 text-xs font-normal opacity-80">{priceNote}</span>}
           </Link>
         </Button>
       </div>
