@@ -20,7 +20,7 @@ export function CtaSection() {
             <Button asChild size="lg" className="bg-white text-black hover:bg-white/90">
               <Link href="/devis">Simuler un devis</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-black/20 text-black hover:bg-black/10">
+            <Button asChild size="lg" variant="outline" className="border-black/20 text-black hover:bg-dark/10">
               <Link href="/contact">Nous contacter</Link>
             </Button>
           </div>

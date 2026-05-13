@@ -31,7 +31,7 @@ export function ContactInfo() {
 
       <div className="space-y-4">
         {contactBlocks.map((item) => (
-          <div key={item.label} className="rounded-[1.5rem] border border-white/10 bg-black/20 p-4">
+          <div key={item.label} className="rounded-[1.5rem] border border-white/10 bg-dark/20 p-4">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">{item.label}</p>
             {item.href ? (
               <Link href={item.href} className="mt-2 block text-base font-medium text-white transition hover:text-[var(--color-accent)]">

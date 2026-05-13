@@ -31,8 +31,8 @@ export default async function PortfolioDetailPage({ params }: { params: Promise<
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-6">
           <div className="aspect-[16/10] rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,_rgba(168,85,247,0.2),_rgba(255,255,255,0.04))] p-6">
-            <div className="flex h-full items-end rounded-[1.5rem] border border-white/10 bg-black/45 p-6">
-              <span className="rounded-full border border-white/10 bg-black/40 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/80">
+            <div className="flex h-full items-end rounded-[1.5rem] border border-white/10 bg-dark/45 p-6">
+              <span className="rounded-full border border-white/10 bg-dark/40 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/80">
                 Placeholder visuel — {entry.type}
               </span>
             </div>

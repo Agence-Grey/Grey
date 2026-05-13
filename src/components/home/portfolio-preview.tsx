@@ -39,7 +39,7 @@ export function PortfolioPreview() {
           >
             <div className="aspect-[4/3] bg-[linear-gradient(135deg,_rgba(168,85,247,0.22),_rgba(255,255,255,0.05))] p-5">
               <div className="flex h-full items-end rounded-[1.5rem] border border-white/10 bg-[radial-gradient(circle_at_top,_rgba(168,85,247,0.18),_transparent_50%),rgba(8,8,8,0.92)] p-5">
-                <span className="rounded-full border border-white/10 bg-black/40 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/80">
+                <span className="rounded-full border border-white/10 bg-dark/40 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/80">
                   {project.type}
                 </span>
               </div>

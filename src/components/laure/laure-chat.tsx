@@ -124,7 +124,7 @@ export function LaureChat({ onClose }: { onClose: () => void }) {
       {/* Header */}
       <div className="flex items-center justify-between border-b border-white/10 bg-[var(--color-accent)] px-5 py-3.5">
         <div className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black/20">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-dark/20">
             <MessageCircle className="size-4 text-black" />
           </div>
           <div>
@@ -134,7 +134,7 @@ export function LaureChat({ onClose }: { onClose: () => void }) {
         </div>
         <button
           onClick={onClose}
-          className="inline-flex h-8 w-8 items-center justify-center rounded-full text-black/70 transition hover:bg-black/10 hover:text-black"
+          className="inline-flex h-8 w-8 items-center justify-center rounded-full text-black/70 transition hover:bg-dark/10 hover:text-black"
           aria-label="Fermer"
         >
           <X className="size-4" />
@@ -173,9 +173,9 @@ export function LaureChat({ onClose }: { onClose: () => void }) {
             >
               {msg.content || (loading && i === messages.length - 1 ? (
                 <span className="inline-flex gap-1">
-                  <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-white/40" />
-                  <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-white/40 [animation-delay:0.1s]" />
-                  <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-white/40 [animation-delay:0.2s]" />
+                  <span className="h-1.5 w-1.5 animate-loading-dot rounded-full bg-white/40" />
+                  <span className="h-1.5 w-1.5 animate-loading-dot rounded-full bg-white/40 [animation-delay:0.1s]" />
+                  <span className="h-1.5 w-1.5 animate-loading-dot rounded-full bg-white/40 [animation-delay:0.2s]" />
                 </span>
               ) : null)}
             </div>

@@ -25,8 +25,8 @@ export default function PortfolioPage() {
             className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition hover:border-[var(--color-accent)]/35"
           >
             <div className="aspect-[4/3] bg-[linear-gradient(135deg,_rgba(168,85,247,0.22),_rgba(255,255,255,0.05))] p-5">
-              <div className="flex h-full items-end rounded-[1.5rem] border border-white/10 bg-black/50 p-5">
-                <span className="rounded-full border border-white/10 bg-black/50 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/80">
+              <div className="flex h-full items-end rounded-[1.5rem] border border-white/10 bg-dark/50 p-5">
+                <span className="rounded-full border border-white/10 bg-dark/50 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/80">
                   {entry.type}
                 </span>
               </div>

@@ -122,9 +122,9 @@ export function HeroAnimation() {
             <div className="mx-auto w-[200px]">
               <div className="rounded-[2rem] border border-white/15 bg-[#0d0d0d] p-2 shadow-[0_30px_80px_rgba(88,28,135,0.3)]">
                 {/* Notch */}
-                <div className="mx-auto mb-2 h-4 w-20 rounded-b-xl bg-black/60" />
+                <div className="mx-auto mb-2 h-4 w-20 rounded-b-xl bg-dark/60" />
                 {/* Screen */}
-                <div className="aspect-[9/19] overflow-hidden rounded-[1.25rem] bg-black/70 p-3">
+                <div className="aspect-[9/19] overflow-hidden rounded-[1.25rem] bg-dark/70 p-3">
                   <MockupPlaceholder type="mobile" />
                 </div>
                 {/* Home bar */}

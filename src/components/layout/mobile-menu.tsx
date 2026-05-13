@@ -17,7 +17,7 @@ export function MobileMenu() {
       </Button>
 
       {open && (
-        <div className="fixed inset-0 z-50 bg-black md:hidden">
+        <div className="fixed inset-0 z-50 bg-dark md:hidden">
           <div className="flex min-h-screen flex-col px-6 pb-10 pt-6">
             <div className="flex items-center justify-between">
               <div>
