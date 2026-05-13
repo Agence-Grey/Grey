@@ -14,7 +14,7 @@ export default function ContactPage() {
     <SectionWrapper
       eyebrow="Contact"
       title="Un besoin clair mérite une réponse claire"
-      description="Décrivez votre activité, votre besoin et ce que vous attendez du site. Nous revenons vers vous rapidement."
+      description="Décrivez votre activité, votre besoin et ce que vous attendez du site. Nous revenons vers vous d&apos;ici 24h."
     >
       <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
         <ContactForm />
