@@ -35,7 +35,7 @@ export const servicePackages = [
   {
     slug: "booster",
     name: "Le Booster",
-    price: "1 290 € + abonnement sur mesure",
+    price: "1 290 € + abonnement*",
     priceNote: "",
     summary: "Augmentez vos rendez-vous, vos appels et vos ventes avec l'automatisation IA. Pour ceux qui veulent aller plus loin.",
     idealFor:
