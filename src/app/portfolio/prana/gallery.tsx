@@ -83,7 +83,7 @@ export function PranaGallery() {
           {/* Prev */}
           <button
             onClick={(e) => { e.stopPropagation(); prev(); }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-dark/60 p-3 text-white/80 transition hover:bg-white/10 hover:text-white"
+            className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full border border-white/10 bg-dark/60 p-3 text-white/80 transition hover:bg-white/10 hover:text-white"
             aria-label="Image précédente"
           >
             <ChevronLeft className="size-6" />
@@ -92,7 +92,7 @@ export function PranaGallery() {
           {/* Next */}
           <button
             onClick={(e) => { e.stopPropagation(); next(); }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-dark/60 p-3 text-white/80 transition hover:bg-white/10 hover:text-white"
+            className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full border border-white/10 bg-dark/60 p-3 text-white/80 transition hover:bg-white/10 hover:text-white"
             aria-label="Image suivante"
           >
             <ChevronRight className="size-6" />
