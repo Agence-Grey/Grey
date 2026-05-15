@@ -11,7 +11,7 @@ const projects = [
     title: "Prana",
     type: "Yoga",
     summary: "Maquette complète d'un site vitrine pour un studio de yoga — respiration visuelle, parcours fluide et détails premium.",
-    image: "/portfolio/prana/img_4d930aae2969.png",
+    image: "/portfolio/prana/img_7f2e848e586d.png",
   },
   {
     slug: "classique",
