@@ -6,13 +6,13 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const opheliaImages = [
-  "/portfolio/ophelia/img_01.jpg",
-  "/portfolio/ophelia/img_02.jpg",
-  "/portfolio/ophelia/img_03.jpg",
-  "/portfolio/ophelia/img_04.jpg",
-  "/portfolio/ophelia/img_05.jpg",
-  "/portfolio/ophelia/img_06.jpg",
-];
+  { src: "/portfolio/ophelia/img_01.jpg", w: 1859, h: 883 },
+  { src: "/portfolio/ophelia/img_02.jpg", w: 1854, h: 883 },
+  { src: "/portfolio/ophelia/img_03.jpg", w: 1855, h: 879 },
+  { src: "/portfolio/ophelia/img_04.jpg", w: 1855, h: 886 },
+  { src: "/portfolio/ophelia/img_05.jpg", w: 1857, h: 887 },
+  { src: "/portfolio/ophelia/img_06.jpg", w: 1853, h: 886 },
+] as const;
 
 export function OpheliaGallery() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -37,24 +37,31 @@ export function OpheliaGallery() {
   return (
     <>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {opheliaImages.map((src, index) => (
-          <button
-            key={src}
-            onClick={() => setOpenIndex(index)}
-            className={cn(
-              "group relative aspect-[16/10] cursor-zoom-in overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 text-left",
-              "transition hover:border-white/25"
-            )}
-          >
-            <Image
-              src={src}
-              alt={`Ophelia maquette ecran ${index + 1}`}
-              fill
-              className="object-contain transition duration-500"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            />
-          </button>
-        ))}
+        {opheliaImages.map((img, index) => {
+          const landscape = img.w >= img.h;
+          return (
+            <button
+              key={img.src}
+              onClick={() => setOpenIndex(index)}
+              className={cn(
+                "group relative cursor-zoom-in overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 text-left",
+                landscape ? "aspect-[16/10]" : "aspect-[4/3]",
+                "transition hover:border-white/25"
+              )}
+            >
+              <Image
+                src={img.src}
+                alt={`Ophelia maquette écran ${index + 1}`}
+                fill
+                className={cn(
+                  "transition duration-500",
+                  landscape ? "object-contain" : "object-cover"
+                )}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </button>
+          );
+        })}
       </div>
 
       {openIndex !== null && (
@@ -91,12 +98,17 @@ export function OpheliaGallery() {
           </button>
 
           <div
-            className="relative mx-2 sm:mx-8 md:mx-16 w-full max-h-[80vh] max-w-full aspect-[16/9] md:max-w-5xl md:aspect-[4/3]"
+            className={cn(
+              "relative mx-2 sm:mx-8 md:mx-16 w-full max-h-[80vh] max-w-full",
+              opheliaImages[openIndex].w >= opheliaImages[openIndex].h
+                ? "aspect-[16/9] md:max-w-5xl md:aspect-[4/3]"
+                : "aspect-[10/16] md:max-w-md"
+            )}
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={opheliaImages[openIndex]}
-              alt={`Ophelia maquette ecran ${openIndex + 1}`}
+              src={opheliaImages[openIndex].src}
+              alt={`Ophelia maquette écran ${openIndex + 1}`}
               fill
               className="object-contain"
               sizes="100vw"

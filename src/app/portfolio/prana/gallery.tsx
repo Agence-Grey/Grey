@@ -6,16 +6,16 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const pranaImages = [
-  "/portfolio/prana/img_4d930aae2969.png",
-  "/portfolio/prana/img_791c0a0a3380.png",
-  "/portfolio/prana/img_7d2d07a36b3f.png",
-  "/portfolio/prana/img_7f2e848e586d.png",
-  "/portfolio/prana/img_a69f473feace.png",
-  "/portfolio/prana/img_d21866675b37.png",
-  "/portfolio/prana/img_dac5c57bd131.png",
-  "/portfolio/prana/img_dd2f369788fd.png",
-  "/portfolio/prana/img_e3a4b7df3625.png",
-];
+  { src: "/portfolio/prana/img_4d930aae2969.png", w: 2880, h: 1412, label: "écran desktop" },
+  { src: "/portfolio/prana/img_791c0a0a3380.png", w: 1290, h: 2796, label: "écran mobile" },
+  { src: "/portfolio/prana/img_7d2d07a36b3f.png", w: 1290, h: 2449, label: "écran mobile" },
+  { src: "/portfolio/prana/img_7f2e848e586d.png", w: 1290, h: 2190, label: "écran mobile" },
+  { src: "/portfolio/prana/img_a69f473feace.png", w: 1290, h: 2796, label: "écran mobile" },
+  { src: "/portfolio/prana/img_d21866675b37.png", w: 2880, h: 1534, label: "écran desktop" },
+  { src: "/portfolio/prana/img_dac5c57bd131.png", w: 2880, h: 1412, label: "écran desktop" },
+  { src: "/portfolio/prana/img_dd2f369788fd.png", w: 1290, h: 2796, label: "écran mobile" },
+  { src: "/portfolio/prana/img_e3a4b7df3625.png", w: 1290, h: 2796, label: "écran mobile" },
+] as const;
 
 export function PranaGallery() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -41,24 +41,31 @@ export function PranaGallery() {
     <>
       {/* Grid */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {pranaImages.map((src, index) => (
-          <button
-            key={src}
-            onClick={() => setOpenIndex(index)}
-            className={cn(
-              "group relative aspect-[16/10] cursor-zoom-in overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 text-left",
-              "transition hover:border-white/25"
-            )}
-          >
-            <Image
-              src={src}
-              alt={`Prana maquette écran ${index + 1}`}
-              fill
-              className="object-contain transition duration-500"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            />
-          </button>
-        ))}
+        {pranaImages.map((img, index) => {
+          const landscape = img.w >= img.h;
+          return (
+            <button
+              key={img.src}
+              onClick={() => setOpenIndex(index)}
+              className={cn(
+                "group relative cursor-zoom-in overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 text-left",
+                landscape ? "aspect-[16/10]" : "aspect-[4/3]",
+                "transition hover:border-white/25"
+              )}
+            >
+              <Image
+                src={img.src}
+                alt={`Prana maquette ${img.label} ${index + 1}`}
+                fill
+                className={cn(
+                  "transition duration-500",
+                  landscape ? "object-contain" : "object-cover"
+                )}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </button>
+          );
+        })}
       </div>
 
       {/* Lightbox */}
@@ -100,12 +107,17 @@ export function PranaGallery() {
 
           {/* Image */}
           <div
-            className="relative mx-2 sm:mx-8 md:mx-16 w-full max-h-[80vh] max-w-full aspect-[16/9] md:max-w-5xl md:aspect-[4/3]"
+            className={cn(
+              "relative mx-2 sm:mx-8 md:mx-16 w-full max-h-[80vh] max-w-full",
+              pranaImages[openIndex].w >= pranaImages[openIndex].h
+                ? "aspect-[16/9] md:max-w-5xl md:aspect-[4/3]"
+                : "aspect-[10/16] md:max-w-md"
+            )}
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={pranaImages[openIndex]}
-              alt={`Prana maquette écran ${openIndex + 1}`}
+              src={pranaImages[openIndex].src}
+              alt={`Prana maquette ${pranaImages[openIndex].label} ${openIndex + 1}`}
               fill
               className="object-contain"
               sizes="100vw"
