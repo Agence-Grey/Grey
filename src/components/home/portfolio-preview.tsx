@@ -47,7 +47,7 @@ export function PortfolioPreview() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-contain"
+                  className="object-cover p-1"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               ) : (
