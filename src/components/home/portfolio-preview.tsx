@@ -16,7 +16,7 @@ const previewProjects = [
     title: "Classique",
     type: "Danse",
     summary: "Maquette complète d'un site vitrine pour un studio de danse — élégance, mouvement et présence scénique.",
-    image: "/portfolio/classique/img_01.png",
+    image: "/portfolio/classique/img_preview.jpg",
   },
   {
     slug: "ophelia",
