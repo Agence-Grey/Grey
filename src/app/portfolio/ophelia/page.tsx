@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { OpheliaGallery } from "./gallery";
 
 export const metadata: Metadata = buildPageMetadata({
+  path: "/portfolio/ophelia",
   title: "Ophelia — Maquette Pole Dance",
   description:
     "Galerie complete de la maquette Ophelia — design, flow et details visuels d'un site pour studio de pole dance.",

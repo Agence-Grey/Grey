@@ -3,9 +3,10 @@ import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { buildPageMetadata } from "@/components/shared/seo";
 
 export const metadata: Metadata = buildPageMetadata({
+  path: "/cgv",
   title: "Conditions Générales de Vente",
   description:
-    "CGV de l’Agence Grey — création, maintenance et hébergement de sites internet.",
+    "CGV de l'Agence Grey — création, maintenance et hébergement de sites internet.",
 });
 
 export default function CGVPage() {

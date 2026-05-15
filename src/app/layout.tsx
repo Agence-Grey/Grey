@@ -23,15 +23,10 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "/",
     siteName: siteConfig.name,
-    title: siteConfig.name,
     description: siteConfig.description,
     images: [
       {

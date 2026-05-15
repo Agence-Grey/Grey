@@ -5,6 +5,7 @@ import { buildPageMetadata } from "@/components/shared/seo";
 import { aboutValues } from "@/lib/content";
 
 export const metadata: Metadata = buildPageMetadata({
+  path: "/about",
   title: "À propos",
   description:
     "Découvrez Adrien et Ophélie, le duo derrière L\u2019Agence Grey, et leur vision d\u2019un web clair, rassurant et efficace.",

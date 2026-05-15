@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { buildPageMetadata } from "@/components/shared/seo";
 
 export const metadata: Metadata = buildPageMetadata({
+  path: "/paiement",
   title: "Paiement",
   description: "Zone de paiement sécurisée.",
   noIndex: true,

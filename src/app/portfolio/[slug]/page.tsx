@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const entry = portfolioEntries.find((item) => item.slug === slug);
   if (!entry) return {};
-  return buildPageMetadata({ title: entry.titre, description: entry.description });
+  return buildPageMetadata({ title: entry.titre, description: entry.description, path: `/portfolio/${slug}` });
 }
 
 export default async function PortfolioDetailPage({ params }: { params: Promise<{ slug: string }> }) {

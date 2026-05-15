@@ -5,8 +5,9 @@ import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { buildPageMetadata } from "@/components/shared/seo";
 
 export const metadata: Metadata = buildPageMetadata({
+  path: "/contact",
   title: "Contact",
-  description: "Contactez L’Agence Grey pour cadrer un site plus clair, plus crédible et plus utile à votre activité.",
+  description: "Contactez L'Agence Grey pour cadrer un site plus clair, plus crédible et plus utile à votre activité.",
 });
 
 export default function ContactPage() {

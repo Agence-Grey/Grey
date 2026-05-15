@@ -8,6 +8,7 @@ import { CTABanner } from "@/components/devis/cta-banner";
 import { servicePackages, serviceAddons, devisReassurance } from "@/lib/content";
 
 export const metadata: Metadata = buildPageMetadata({
+  path: "/devis",
   title: "Devis — Tarifs clairs",
   description: "Des tarifs clairs, sans surprise. Découvrez les trois offres de L'Agence Grey et choisissez celle qui correspond à vos besoins.",
 });

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { PranaGallery } from "./gallery";
 
 export const metadata: Metadata = buildPageMetadata({
+  path: "/portfolio/prana",
   title: "Prana — Maquette Studio Yoga",
   description:
     "Galerie complète de la maquette Prana — design, flow et détails visuels d'un site pour studio de yoga.",

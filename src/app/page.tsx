@@ -8,6 +8,7 @@ import { SchemaOrg } from "@/components/shared/schema-org";
 import { siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/" },
   title: "Agence web IA à Nice | Sites premium pour studios",
   description: siteConfig.description,
   openGraph: {

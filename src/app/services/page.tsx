@@ -5,6 +5,7 @@ import { PricingCard } from "@/components/devis/pricing-card";
 import { serviceAddons, servicePackages } from "@/lib/content";
 
 export const metadata: Metadata = buildPageMetadata({
+  path: "/services",
   title: "Services",
   description: "Découvrez les trois niveaux d'accompagnement de L'Agence Grey et les services additionnels proposés.",
 });

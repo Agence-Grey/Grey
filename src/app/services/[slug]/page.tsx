@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const offer = servicePackages.find((entry) => entry.slug === slug);
   if (!offer) return {};
-  return buildPageMetadata({ title: `Offre ${offer.name}`, description: offer.summary });
+  return buildPageMetadata({ title: `Offre ${offer.name}`, description: offer.summary, path: `/services/${slug}` });
 }
 
 export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {

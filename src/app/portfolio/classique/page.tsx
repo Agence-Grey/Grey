@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ClassiqueGallery } from "./gallery";
 
 export const metadata: Metadata = buildPageMetadata({
+  path: "/portfolio/classique",
   title: "Classique — Maquette Studio de Danse",
   description:
     "Galerie complète de la maquette Classique — design, flow et détails visuels d'un site pour studio de danse.",

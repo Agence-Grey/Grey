@@ -4,6 +4,7 @@ import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { buildPageMetadata } from "@/components/shared/seo";
 
 export const metadata: Metadata = buildPageMetadata({
+  path: "/cgu",
   title: "Conditions Générales d'Utilisation",
   description:
     "CGU de l'Agence Grey — règles d'utilisation du site et protection des données.",

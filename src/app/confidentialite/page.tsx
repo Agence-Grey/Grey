@@ -3,6 +3,7 @@ import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { buildPageMetadata } from "@/components/shared/seo";
 
 export const metadata: Metadata = buildPageMetadata({
+  path: "/confidentialite",
   title: "Politique de confidentialité",
   description: "Politique de confidentialité de L’Agence Grey.",
   noIndex: true,
