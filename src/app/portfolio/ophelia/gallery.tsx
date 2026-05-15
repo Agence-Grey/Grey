@@ -6,13 +6,12 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const opheliaImages = [
-  "/portfolio/ophelia/img_01.png",
-  "/portfolio/ophelia/img_02.png",
-  "/portfolio/ophelia/img_03.png",
-  "/portfolio/ophelia/img_04.png",
-  "/portfolio/ophelia/img_05.png",
-  "/portfolio/ophelia/img_06.png",
-  "/portfolio/ophelia/img_07.png",
+  "/portfolio/ophelia/img_01.jpg",
+  "/portfolio/ophelia/img_02.jpg",
+  "/portfolio/ophelia/img_03.jpg",
+  "/portfolio/ophelia/img_04.jpg",
+  "/portfolio/ophelia/img_05.jpg",
+  "/portfolio/ophelia/img_06.jpg",
 ];
 
 export function OpheliaGallery() {
