@@ -19,11 +19,11 @@ const previewProjects = [
     image: "/portfolio/classique/img_01.png",
   },
   {
-    slug: "placeholder",
-    title: "Studio force & performance",
-    type: "Performance",
-    summary: "Une esthétique plus dense, plus stricte, sans tomber dans le cliché fitness criard.",
-    image: null,
+    slug: "ophelia",
+    title: "Ophelia",
+    type: "Pole Dance",
+    summary: "Maquette complete d'un site vitrine pour un studio de pole dance — force, grace et esthetique contemporaine.",
+    image: "/portfolio/ophelia/img_01.png",
   },
 ];
 
