@@ -46,7 +46,7 @@ export function PranaGallery() {
             key={src}
             onClick={() => setOpenIndex(index)}
             className={cn(
-              "group relative aspect-[4/3] cursor-zoom-in overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 text-left",
+              "group relative aspect-[16/10] cursor-zoom-in overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 text-left",
               "transition hover:border-white/25"
             )}
           >
@@ -54,7 +54,7 @@ export function PranaGallery() {
               src={src}
               alt={`Prana maquette écran ${index + 1}`}
               fill
-              className="object-cover transition duration-500"
+              className="object-contain transition duration-500"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           </button>

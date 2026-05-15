@@ -41,13 +41,13 @@ export function PortfolioPreview() {
             href={project.slug === "placeholder" ? "#" : `/portfolio/${project.slug}`}
             className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition hover:border-[var(--color-accent)]/30 hover:bg-white/[0.07]"
           >
-            <div className="relative aspect-[4/3] bg-[linear-gradient(135deg,_rgba(168,85,247,0.22),_rgba(255,255,255,0.05))] p-5">
+            <div className="relative aspect-[16/10] bg-[linear-gradient(135deg,_rgba(168,85,247,0.22),_rgba(255,255,255,0.05))] p-5">
               {project.image ? (
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover p-1"
+                  className="object-contain p-1"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               ) : (
