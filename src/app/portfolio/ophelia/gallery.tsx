@@ -91,7 +91,7 @@ export function OpheliaGallery() {
           </button>
 
           <div
-            className="relative mx-2 sm:mx-8 md:mx-16 w-full max-h-[80vh] max-w-full md:max-w-5xl md:aspect-[4/3]"
+            className="relative mx-2 sm:mx-8 md:mx-16 w-full max-h-[80vh] max-w-full aspect-[16/9] md:max-w-5xl md:aspect-[4/3]"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
