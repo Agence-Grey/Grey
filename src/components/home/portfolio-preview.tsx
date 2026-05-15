@@ -23,7 +23,7 @@ const previewProjects = [
     title: "Ophelia",
     type: "Pole Dance",
     summary: "Maquette complete d'un site vitrine pour un studio de pole dance — force, grace et esthetique contemporaine.",
-    image: "/portfolio/ophelia/img_01.png",
+    image: "/portfolio/ophelia/img_preview.jpg",
   },
 ];
 
