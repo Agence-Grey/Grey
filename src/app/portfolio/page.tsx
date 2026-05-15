@@ -38,8 +38,8 @@ export default function PortfolioPage() {
   return (
     <SectionWrapper
       eyebrow="Portfolio"
-      title="Galerie de cas d'usage et de directions créatives"
-      description="Découvrez nos maquettes conçues pour les studios de mouvement, yoga, danse et pole dance."
+      title="Un petit aperçu de ce qu'on a déjà construit"
+      description="Un site professionnel pour un studio professionnel, vous êtes peut-être le prochain."
     >
       <div className="grid gap-6 lg:grid-cols-3">
         {projects.map((project, index) => (
