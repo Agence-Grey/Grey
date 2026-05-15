@@ -12,11 +12,11 @@ const previewProjects = [
     image: "/portfolio/prana/img_4d930aae2969.png",
   },
   {
-    slug: "placeholder",
-    title: "Studio biomécanique premium",
-    type: "Biomechanics",
-    summary: "Présence digitale sobre, crédible, pensée pour rassurer avant même la première prise de contact.",
-    image: null,
+    slug: "classique",
+    title: "Classique",
+    type: "Danse",
+    summary: "Maquette complète d'un site vitrine pour un studio de danse — élégance, mouvement et présence scénique.",
+    image: "/portfolio/classique/img_01.png",
   },
   {
     slug: "placeholder",
