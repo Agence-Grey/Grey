@@ -100,7 +100,7 @@ export function PranaGallery() {
 
           {/* Image */}
           <div
-            className="relative mx-16 aspect-[4/3] w-full max-w-5xl"
+            className="relative mx-2 sm:mx-8 md:mx-16 w-full max-h-[80vh] max-w-full md:max-w-5xl md:aspect-[4/3]"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -108,7 +108,7 @@ export function PranaGallery() {
               alt={`Prana maquette écran ${openIndex + 1}`}
               fill
               className="object-contain"
-              sizes="90vw"
+              sizes="100vw"
               priority
             />
           </div>
