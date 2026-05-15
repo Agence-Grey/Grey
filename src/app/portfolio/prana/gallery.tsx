@@ -54,7 +54,7 @@ export function PranaGallery() {
               src={src}
               alt={`Prana maquette écran ${index + 1}`}
               fill
-              className="object-cover transition duration-500 group-hover:scale-105"
+              className="object-cover transition duration-500"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           </button>
