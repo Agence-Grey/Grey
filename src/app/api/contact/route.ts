@@ -13,8 +13,10 @@ export async function POST(request: Request) {
 
   const supabase = getSupabaseAdminClient();
   if (!supabase) {
-    // Still try to send email even without DB
-    const emailResult = await sendContactNotification(parsed.data);
+    const emailResult = await sendContactNotification({
+      ...parsed.data,
+      offre: body?.offre ?? undefined,
+    });
     return NextResponse.json({ ok: true, mode: "stub", email: emailResult.ok });
   }
 
@@ -31,8 +33,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
   }
 
-  // Send email notification (fire-and-forget, don't block on failure)
-  sendContactNotification(parsed.data);
+  sendContactNotification({
+    ...parsed.data,
+    offre: body?.offre ?? undefined,
+  });
 
   return NextResponse.json({ ok: true });
 }

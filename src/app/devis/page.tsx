@@ -43,6 +43,7 @@ export default function DevisPage() {
                 features={offer.features}
                 featured={index === 1}
                 href="/contact"
+                offerSlug={offer.slug}
               />
             ))}
           </div>

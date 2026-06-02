@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,6 +13,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { servicePackages } from "@/lib/content";
+import { Badge } from "@/components/ui/badge";
 
 const studioTypes = [
   { value: "yoga", label: "Studio de yoga" },
@@ -31,6 +34,11 @@ const initialState = {
 export function ContactForm() {
   const [form, setForm] = useState(initialState);
   const [loading, setLoading] = useState(false);
+  const searchParams = useSearchParams();
+  const offreSlug = searchParams.get("offre");
+  const selectedOffer = offreSlug
+    ? servicePackages.find((o) => o.slug === offreSlug)
+    : null;
 
   const updateField = (key: keyof typeof initialState, value: string) => {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -40,11 +48,16 @@ export function ContactForm() {
     event.preventDefault();
     setLoading(true);
 
+    const payload = {
+      ...form,
+      offre: offreSlug ?? undefined,
+    };
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json().catch(() => ({}));
@@ -55,14 +68,14 @@ export function ContactForm() {
           ? Object.values(fieldErrors).flat().find(Boolean)
           : null;
 
-        toast.error(firstError || data?.error || "Impossible d’envoyer le message pour l’instant.");
+        toast.error(firstError || data?.error || "Impossible d'envoyer le message pour l'instant.");
         return;
       }
 
       toast.success("Message envoyé. Nous revenons vers vous rapidement.");
       setForm(initialState);
     } catch {
-      toast.error("Le formulaire n’a pas pu être envoyé. Réessaie dans un instant.");
+      toast.error("Le formulaire n'a pas pu être envoyé. Réessaie dans un instant.");
     } finally {
       setLoading(false);
     }
@@ -70,6 +83,18 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="space-y-5 rounded-[2rem] border border-white/10 bg-white/5 p-6 sm:p-8">
+      {selectedOffer && (
+        <div className="rounded-xl border border-[var(--color-accent)]/20 bg-[var(--color-accent)]/5 p-4">
+          <p className="text-sm text-[var(--color-muted-foreground)]">Pack sélectionné</p>
+          <div className="mt-1 flex items-center gap-3">
+            <span className="text-lg font-semibold text-white">{selectedOffer.name}</span>
+            <Badge variant="outline" className="border-[var(--color-accent)]/30 text-[var(--color-accent)]">
+              {selectedOffer.price}
+            </Badge>
+          </div>
+        </div>
+      )}
+
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
           <label className="text-sm font-medium text-white" htmlFor="nom">

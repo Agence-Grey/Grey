@@ -12,6 +12,7 @@ interface PricingCardProps {
   features: readonly string[];
   featured?: boolean;
   href: string;
+  offerSlug?: string;
 }
 
 export function PricingCard({
@@ -22,7 +23,9 @@ export function PricingCard({
   features,
   featured = false,
   href,
+  offerSlug,
 }: PricingCardProps) {
+  const targetHref = offerSlug ? `${href}?offre=${offerSlug}` : href;
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -59,7 +62,7 @@ export function PricingCard({
 
       <div className="mt-auto">
         <Button asChild className="w-full" variant={featured ? "default" : "secondary"} size="lg">
-          <Link href={href}>
+          <Link href={targetHref}>
             <span className="text-lg font-bold">{price}</span>
             {priceNote && <span className="ml-2 text-xs font-normal opacity-80">{priceNote}</span>}
           </Link>

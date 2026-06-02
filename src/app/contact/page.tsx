@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ContactForm } from "@/components/contact/contact-form";
 import { ContactInfo } from "@/components/contact/contact-info";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
@@ -18,7 +19,9 @@ export default function ContactPage() {
       description="Décrivez votre activité, votre besoin et ce que vous attendez du site. Nous revenons vers vous d&apos;ici 24h."
     >
       <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-        <ContactForm />
+        <Suspense>
+          <ContactForm />
+        </Suspense>
         <ContactInfo />
       </div>
     </SectionWrapper>

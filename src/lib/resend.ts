@@ -24,11 +24,16 @@ type ContactData = {
   telephone?: string;
   type_studio?: string;
   message: string;
+  offre?: string;
 };
 
 export async function sendContactNotification(data: ContactData) {
   const resend = getResendClient();
   if (!resend) return { ok: false, error: "Resend not configured" };
+
+  const offreLine = data.offre
+    ? `\nPack sélectionné : ${getOfferLabel(data.offre)}\n`
+    : "";
 
   try {
     await resend.emails.send({
@@ -37,7 +42,7 @@ export async function sendContactNotification(data: ContactData) {
       subject: `[Grey] Nouveau contact — ${data.nom}`,
       replyTo: data.email,
       text: `Nouveau message depuis le formulaire de contact agence-grey.fr
-
+${offreLine}
 Nom : ${data.nom}
 Email : ${data.email}
 Téléphone : ${data.telephone || "Non renseigné"}
