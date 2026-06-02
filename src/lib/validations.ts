@@ -16,7 +16,7 @@ export const devisSchema = z.object({
   ville: z.string().optional(),
   type_studio: z.string().min(2),
   besoins: z.array(z.string()).default([]),
-  offre: z.enum(["starter", "pro", "premium"]),
+  offre: z.enum(["essentiel", "confort", "booster"]),
   estimation_min: z.number().int().optional(),
   estimation_max: z.number().int().optional(),
   estimation_affichee: z.string().optional(),

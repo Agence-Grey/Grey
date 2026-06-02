@@ -1,4 +1,4 @@
-export type OfferSlug = "starter" | "pro" | "premium";
+export type OfferSlug = "essentiel" | "confort" | "booster";
 
 export type DevisRequest = {
   nom: string;

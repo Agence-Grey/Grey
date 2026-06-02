@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import { servicePackages } from "@/lib/content";
 
 const NOTIFY_EMAIL = "agencegrey06@gmail.com";
 const FROM_EMAIL = "Grey <onboarding@resend.dev>";
@@ -6,6 +7,15 @@ const FROM_EMAIL = "Grey <onboarding@resend.dev>";
 export function getResendClient() {
   if (!process.env.RESEND_API_KEY) return null;
   return new Resend(process.env.RESEND_API_KEY);
+}
+
+function getOfferLabel(slug: string): string {
+  const offer = servicePackages.find((o) => o.slug === slug);
+  if (offer) {
+    const priceInfo = offer.priceNote ? `${offer.price} ${offer.priceNote}` : offer.price;
+    return `${offer.name} — ${priceInfo}`;
+  }
+  return slug; // fallback
 }
 
 type ContactData = {
@@ -62,8 +72,9 @@ export async function sendDevisNotification(data: DevisData) {
   const resend = getResendClient();
   if (!resend) return { ok: false, error: "Resend not configured" };
 
-  const besoinsList =
-    data.besoins.length > 0 ? data.besoins.join("\n- ") : "Aucun";
+  const besoinsStr = data.besoins.length > 0
+    ? data.besoins.map((b) => `- ${b}`).join("\n")
+    : "- Aucun";
 
   try {
     await resend.emails.send({
@@ -73,21 +84,25 @@ export async function sendDevisNotification(data: DevisData) {
       replyTo: data.email,
       text: `Nouvelle demande de devis depuis agence-grey.fr
 
-Client : ${data.nom}
-Email : ${data.email}
-Téléphone : ${data.telephone || "Non renseigné"}
-Studio : ${data.nom_studio}
-Ville : ${data.ville || "Non renseignée"}
-Type de studio : ${data.type_studio}
+CLIENT
+  Nom : ${data.nom}
+  Email : ${data.email}
+  Téléphone : ${data.telephone || "Non renseigné"}
 
-Offre choisie : ${data.offre}
-Estimation : ${data.estimation_affichee || "Non calculée"}
-RDV souhaité : ${data.rdv_souhaite ? "Oui" : "Non"}
+STUDIO
+  Nom : ${data.nom_studio}
+  Ville : ${data.ville || "Non renseignée"}
+  Type : ${data.type_studio}
 
-Besoins :
-- ${besoinsList}
+OFFRE
+  ${getOfferLabel(data.offre)}
+  Estimation : ${data.estimation_affichee || "Non calculée"}
+  RDV souhaité : ${data.rdv_souhaite ? "Oui" : "Non"}
 
-Message :
+BESOINS
+${besoinsStr}
+
+MESSAGE
 ${data.message || "Aucun message"}
 `,
     });
