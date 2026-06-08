@@ -17,7 +17,7 @@ const sections = [
       "Responsables de publication : Adrien DEBARLE & Ophélie HUTIN",
       "Adresse : 367 route de Ciaus, Breil-sur-Roya 06540",
       "Email : agencegrey06@gmail.com",
-      "Téléphone / WhatsApp : +33 6 18 00 85 31",
+      "Téléphone : 07 44 42 46 51",
     ],
   },
   {
